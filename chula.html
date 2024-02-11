@@ -1,0 +1,114 @@
+ <!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+          <meta name="viewport" content=" width=device-width , initial-scale = 0.8">
+
+      <title>MENU</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+   </head>
+   <body>
+      <div class="content">
+         <div class="images">
+            <img src="https://i.ibb.co/hgxZ5gL/Whats-App-Image-2024-01-12-at-02-25-22-a93fcc01.jpg">
+            <img src="https://i.ibb.co/hVVYKTd/Whats-App-Image-2024-01-12-at-02-25-23-e0e76df1.jpg">
+            <img src="https://i.ibb.co/LddVjHz/Whats-App-Image-2024-01-12-at-02-25-26-8c5b2f74.jpg">
+            <img src="https://i.ibb.co/d7GSF4Q/Whats-App-Image-2024-01-12-at-02-25-26-79ee0258.jpg">
+            <img src="https://i.ibb.co/Zd0f7gH/Whats-App-Image-2024-01-12-at-02-25-27-8ac25928.jpg">
+         </div>
+         
+         <div class="sliders left" onclick="side_slide(-1)">
+            <span class="fas fa-angle-left"></span>
+         </div>
+         <div class="sliders right" onclick="side_slide(1)">
+            <span class="fas fa-angle-right"></span>
+         </div>
+      </div>
+      <script>
+         var indexValue = 1;
+         showImg(indexValue);
+         function btm_slide(e){showImg(indexValue = e);}
+         function side_slide(e){showImg(indexValue += e);}
+         function showImg(e){
+           var i;
+           const img = document.querySelectorAll('img');
+           const slider = document.querySelectorAll('.btm-slides span');
+           if(e > img.length){indexValue = 1}
+           if(e < 1){indexValue = img.length}
+           for(i = 0; i < img.length; i++){
+             img[i].style.display = "none";
+           }
+           for(i = 0; i < slider.length; i++){
+             slider[i].style.background = "rgba(255,255,255,0.1)";
+           }
+           img[indexValue-1].style.display = "block";
+           slider[indexValue-1].style.background = "gray";
+         }
+      </script>
+   </body>
+</html>
+<style>
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  display: flex;
+ 
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+}
+.content{
+  height: auto;
+  width: 750px;
+  position: relative;
+}
+.content .images{
+  height: 100%;
+  width: 100%;
+}
+.content .images img{
+  height: 100%;
+  width: 100%;
+}
+.btm-slides{
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+.btm-slides span{
+  height: 15px;
+  width: 50px;
+  border: 2px solid white;
+  margin: 0 3px;
+  cursor: pointer;
+}
+.sliders{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 45px;
+  cursor: pointer;
+  border: 2px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.1);
+}
+.sliders:hover{
+  background: rgba(255,255,255,0.2);
+}
+.right{
+  right: 0;
+}
+.sliders span{
+  line-height: 41px;
+  font-size: 35px;
+  color: white;
+}
+
+</style>
