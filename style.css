@@ -154,7 +154,7 @@ section-2 {
 }
 .section-2 .section-2-container .section-2-items .section-2-item {
     width: 100%;
-    max-width: 26%;
+    max-width: fit-content;
     margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.961);
