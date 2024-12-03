@@ -26,6 +26,380 @@ header{
 .header-image img {
     width: 100%;
 } 
+/* From Uiverse.io by Galahhad */ 
+.ui-btn {
+  margin-left: 78px;
+  --btn-default-bg: rgb(41, 41, 41);
+  --btn-padding: 15px 20px;
+  --btn-hover-bg: rgb(51, 51, 51);
+  --btn-transition: .3s;
+  --btn-letter-spacing: .1rem;
+  --btn-animation-duration: 1.2s;
+  --btn-shadow-color: rgba(0, 0, 0, 0.137);
+  --btn-shadow: 0 2px 10px 0 var(--btn-shadow-color);
+  --hover-btn-color: #21fa43;
+  --default-btn-color: #fff;
+  --font-size: 16px;
+  /* 👆 this field should not be empty */
+  --font-weight: 600;
+  --font-family: Menlo,Roboto Mono,monospace;
+  /* 👆 this field should not be empty */
+}
+
+/* button settings 👆 */
+
+.ui-btn {
+  box-sizing: border-box;
+  padding: var(--btn-padding);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--default-btn-color);
+  font: var(--font-weight) var(--font-size) var(--font-family);
+  background: var(--btn-default-bg);
+  border: none;
+  cursor: pointer;
+  transition: var(--btn-transition);
+  overflow: hidden;
+  box-shadow: var(--btn-shadow);
+}
+
+.ui-btn span {
+  letter-spacing: var(--btn-letter-spacing);
+  transition: var(--btn-transition);
+  box-sizing: border-box;
+  position: relative;
+  background: inherit;
+}
+
+.ui-btn span::before {
+  box-sizing: border-box;
+  position: absolute;
+  content: "";
+  background: inherit;
+}
+
+.ui-btn:hover, .ui-btn:focus {
+  background: var(--btn-hover-bg);
+}
+
+.ui-btn:hover span, .ui-btn:focus span {
+  color: var(--hover-btn-color);
+}
+
+.ui-btn:hover span::before, .ui-btn:focus span::before {
+  animation: chitchat linear both var(--btn-animation-duration);
+}
+
+@keyframes chitchat {
+  0% {
+    content: "#";
+  }
+
+  5% {
+    content: ".";
+  }
+
+  10% {
+    content: "^{";
+  }
+
+  15% {
+    content: "-!";
+  }
+
+  20% {
+    content: "#$_";
+  }
+
+  25% {
+    content: "№:0";
+  }
+
+  30% {
+    content: "#{+.";
+  }
+
+  35% {
+    content: "@}-?";
+  }
+
+  40% {
+    content: "?{4@%";
+  }
+
+  45% {
+    content: "=.,^!";
+  }
+
+  50% {
+    content: "?2@%";
+  }
+
+  55% {
+    content: "\;1}]";
+  }
+
+  60% {
+    content: "?{%:%";
+    right: 0;
+  }
+
+  65% {
+    content: "|{f[4";
+    right: 0;
+  }
+
+  70% {
+    content: "{4%0%";
+    right: 0;
+  }
+
+  75% {
+    content: "'1_0<";
+    right: 0;
+  }
+
+  80% {
+    content: "{0%";
+    right: 0;
+  }
+
+  85% {
+    content: "]>'";
+    right: 0;
+  }
+
+  90% {
+    content: "4";
+    right: 0;
+  }
+
+  95% {
+    content: "2";
+    right: 0;
+  }
+
+  100% {
+    content: "";
+    right: 0;
+  }
+}
+.input {
+  justify-content: center;
+  width: 100%;
+  max-width: 270px;
+  height: 60px;
+  padding: 12px;
+  font-size: 18px;
+  font-family: "Courier New", monospace;
+  color: #000;
+  background-color: #fff;
+  border: 4px solid #000;
+  border-radius: 0;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 8px 8px 0 #000;
+  margin:10%;
+  align-items: center;
+  display: flex;
+  padding: 10px;
+}
+
+.input::placeholder {
+  color: #888;
+}
+
+.input:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 12px 12px 0 #000;
+}
+
+.input:focus {
+  background-color: #000;
+  color: #fff;
+  border-color: #ffffff;
+}
+
+.input:focus::placeholder {
+  color: #fff;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.input:focus::after {
+  content: "|";
+  position: absolute;
+  right: 10px;
+  animation: blink 0.7s step-end infinite;
+}
+
+.input:valid {
+  animation: typing 2s steps(30, end);
+}
+.input-container {
+  
+  width: 100%;
+  max-width: 270px;
+  
+
+}
+
+.input {
+  width: 100%;
+  height: 60px;
+  padding: 12px;
+  font-size: 18px;
+  font-family: "Courier New", monospace;
+  color: #000;
+  background-color: #fff;
+  border: 4px solid #000;
+  border-radius: 0;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 8px 8px 0 #000;
+}
+
+.input::placeholder {
+  color: #888;
+}
+
+.input:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 12px 12px 0 #000;
+}
+
+.input:focus {
+  background-color: #010101;
+  color: #fff;
+  border-color: #d6d9dd;
+}
+
+.input:focus::placeholder {
+  color: #fff;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px) rotate(-5deg);
+  }
+  50% {
+    transform: translateX(5px) rotate(5deg);
+  }
+  75% {
+    transform: translateX(-5px) rotate(-5deg);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.input:focus {
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes glitch {
+  0% {
+    transform: none;
+    opacity: 1;
+  }
+  7% {
+    transform: skew(-0.5deg, -0.9deg);
+    opacity: 0.75;
+  }
+  10% {
+    transform: none;
+    opacity: 1;
+  }
+  27% {
+    transform: none;
+    opacity: 1;
+  }
+  30% {
+    transform: skew(0.8deg, -0.1deg);
+    opacity: 0.75;
+  }
+  35% {
+    transform: none;
+    opacity: 1;
+  }
+  52% {
+    transform: none;
+    opacity: 1;
+  }
+  55% {
+    transform: skew(-1deg, 0.2deg);
+    opacity: 0.75;
+  }
+  50% {
+    transform: none;
+    opacity: 1;
+  }
+  72% {
+    transform: none;
+    opacity: 1;
+  }
+  75% {
+    transform: skew(0.4deg, 1deg);
+    opacity: 0.75;
+  }
+  80% {
+    transform: none;
+    opacity: 1;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.input:not(:placeholder-shown) {
+  animation: glitch 1s linear infinite;
+}
+
+.input-container::after {
+  content: "|";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #000;
+  animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.input:focus + .input-container::after {
+  color: #fff;
+
+}
+
+.input:not(:placeholder-shown) {
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: 0px 0px 0 #000;
+}
+
 .nav {
     display: flex;
     justify-content: space-between;
@@ -89,7 +463,7 @@ header{
     outline: none;
     border: none;
     width: 200%;
-    padding-left: 10px;
+    padding-left: 100px;
     font-size: 20px;
 }
 .search .search-item:first-child{
@@ -100,6 +474,36 @@ header{
     width: 70%;
     color: gray;
 }
+
+
+.section-10 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+.section-10 .section-10-item {
+  position: relative;
+  width: 15rem;
+  margin: 3px 5px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: white;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* section-1 */
 .section-1 {
     display: flex;
