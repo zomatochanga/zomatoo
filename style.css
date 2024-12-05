@@ -853,8 +853,9 @@ section-2 {
 .section-2 .section-2-heading {
       font-size: 2rem;
       line-height: 1.2;
-      font-weight: 400px;
-}
+      text-align-last: center;
+      font-family: cursive
+    }
 .section-2 .section-2-container .section-2-items {
     display: flex;
     place-content: space-around space-between;
